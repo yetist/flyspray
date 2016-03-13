@@ -7,6 +7,7 @@
 define('IN_FS', true);
 
 require_once(dirname(__FILE__).'/header.php');
+$cas->init();
 
 // Get available do-modes
 $modes = str_replace('.php', '', array_map('basename', glob_compat(BASEDIR ."/scripts/*.php")));
@@ -44,6 +45,8 @@ if (Cookie::has('flyspray_userid') && Cookie::has('flyspray_passhash')) {
 }
 
 
+// sync cas auth status
+$cas->authsync();
 
 if (Get::val('getfile')) {
     // If a file was requested, deliver it
