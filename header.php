@@ -31,6 +31,7 @@ if (!$conf) {
 $db = new Database();
 $db->dbOpenFast($conf['database']);
 $fs = new Flyspray();
+$cas = new FSCAS();
 
 // If version number of database and files do not match, run upgrader
 if (Flyspray::base_version($fs->version) != Flyspray::base_version($fs->prefs['fs_ver'])) {
