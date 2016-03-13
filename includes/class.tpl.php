@@ -125,7 +125,7 @@ class Tpl
 
 class FSTpl extends Tpl
 {
-    public $_uses = array('fs', 'conf', 'baseurl', 'language', 'proj', 'user');
+    public $_uses = array('fs', 'conf', 'cas', 'baseurl', 'language', 'proj', 'user');
 
     public function get_image($name, $base = true)
 	{
@@ -1031,7 +1031,7 @@ function tpl_disableif ($if)
 // Create an URL based upon address-rewriting preferences {{{
 function CreateURL($type, $arg1 = null, $arg2 = null, $arg3 = array())
 {
-    global $baseurl, $conf, $fs;
+    global $baseurl, $conf, $fs, $cas;
 
     $url = $baseurl;
 
@@ -1125,7 +1125,11 @@ function CreateURL($type, $arg1 = null, $arg2 = null, $arg3 = array())
                 $return = $baseurl . 'index.php?do=admin&area=users&user_id=' . $arg1;
                 break;
             case 'logout':
-                $return = $baseurl . 'index.php?do=authenticate&logout=1';
+                if ($cas->available()) {
+                    $return = $baseurl . 'index.php?do=casauth&logout=1';
+                }else{
+                    $return = $baseurl . 'index.php?do=authenticate&logout=1';
+                }
                 break;
 
             case 'details':
