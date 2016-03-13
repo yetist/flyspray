@@ -4,9 +4,16 @@
 if ($user->isAnon()):
 	# 20150211 peterdd: pure css toggle using checked status, no js needed
 	?><li class="first">
+	<?php if ($cas->available()) { ?>
+		<?php if ($fs->prefs['anon_reg']) { ?>
+			<a id="registerlink" class="active" href="#"><?php echo Filters::noXSS(L('register')); ?></a>
+		<?php } ?>
+	<a href="<?php echo Filters::noXSS($baseurl); ?>index.php?do=casauth<?php echo '&return_to=' . base64_encode($_SERVER['REQUEST_URI']);?>" accesskey="l" class="inactive"><?php echo Filters::noXSS(L('login')); ?></a>
+	<?php }else{ ?>
 	<input type="checkbox" id="s_loginbox" />
         <label for="s_loginbox" id="show_loginbox" accesskey="l"><?php echo Filters::noXSS(L('login')); ?></label>
         <div id="loginbox" class="popup"><?php $this->display('loginbox.tpl'); ?></div>
+	<?php } ?>
 	</li><?php
 else: ?><li>
 		<a id="profilelink" <?php if($do == 'myprofile'): ?> class="active"<?php endif; ?> href="<?php echo Filters::noXSS(CreateURL('myprofile')); ?>" title="<?php echo Filters::noXSS(L('editmydetails')); ?> <?php echo Filters::noXSS($user->infos['real_name']); ?> (<?php echo Filters::noXSS($user->infos['user_name']); ?>)"><i class="fa fa-user fa-lg"></i></a>
