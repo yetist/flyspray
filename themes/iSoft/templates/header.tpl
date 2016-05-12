@@ -71,10 +71,11 @@ if(is_readable(BASEDIR.'/themes/'.$this->_theme.'tags.css')): ?>
         elseif (isset($_SESSION['ERROR'])):
         ?>window.setTimeout('Effect.Fade(\'errorbar\', {duration:.3})', 8000);<?php endif ?>" class="<?php echo (isset($do) ? Filters::noXSS($do) : 'index').' p'.$proj->id; ?>">
 
-    <h1 id="title"><a href="<?php echo Filters::noXSS($baseurl); ?>">
+	<iframe src="https://isoft-linux.org/header.php?p=bug" width="100%" height="122px" scrolling="no" style="display: block;"></iframe>
+	<!--<h1 id="title"><a href="<?php echo Filters::noXSS($baseurl); ?>">
 	<?php if($fs->prefs['logo']) { ?><img src="<?php echo Filters::noXSS($baseurl.'/'.$fs->prefs['logo']); ?>" /><?php } ?>
 	<span><?php echo Filters::noXSS($proj->prefs['project_title']); ?></span>
-    </a></h1>
+    </a></h1>-->
 
 	<div id="nav-menu">
 		<input id="navmenu" type="checkbox">

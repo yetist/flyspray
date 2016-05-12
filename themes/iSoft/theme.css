@@ -68,7 +68,7 @@ body a.button.positive, body button.positive,
 #s_loginbox:checked ~ #show_loginbox,
 #s_quickactions:checked ~ #actions,
 #menu-list a#show_loginbox:hover {
-	background-color: #5f9729;
+	background-color: #f34125;
 }
 
 #nav-menu-list a.active, #nav-menu-list a.active:hover{
@@ -139,9 +139,10 @@ del { color:#666; }
 pre { margin: 1.5em 0; white-space: pre; }
 pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
 li ul, li ol { margin: 0; }
-ul, ol { margin: 0 1.5em 1.5em 0; padding-left: 3em; }
+ul, ol { margin: 0 1.5em 1.5em 0; padding-left: 2em; }
 ul { list-style-type: disc; }
 ol { list-style-type: decimal; }
+li.level1 {padding-bottom:0.2em;}
 dl { margin: 0 0 1.5em 0; }
 dl dt { font-weight: bold; }
 dd { margin-left: 1.5em;}
@@ -222,11 +223,11 @@ a:hover {color: #6699cc;}
   text-align: right;
 }
 #title {
-  background-color: #ffffff; /* fallback/image non-cover color */
-  background-image: -moz-linear-gradient(#3c4041, #242627); /* Firefox 3.6+ */
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c4041), to(#242627)); /* Safari 4+, Chrome 1+ */
-  background-image: -webkit-linear-gradient(#3c4041, #ffffff); /* Safari 5.1+, Chrome 10+ */
-  background-image: -o-linear-gradient(#3c4041, #242627); /* Opera 11.10+ */
+  background-color: #eeeeee; /* fallback/image non-cover color */
+  /*background-image: -moz-linear-gradient(#3c4041, #242627);*/
+  /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3c4041), to(#242627));*/
+  /*background-image: -webkit-linear-gradient(#3c4041, #242627);*/
+  /*background-image: -o-linear-gradient(#3c4041, #242627);*/
   /*border-bottom: 1px solid #6cab2e;*/
   /*border-bottom: 4px solid $dominant;*/
   margin: 0;
@@ -238,11 +239,11 @@ a:hover {color: #6699cc;}
 
 /******/
 
-#title a {color: white; text-decoration: none; display: inline-block; padding: 25px 50px; }
+#title a {color: black; text-decoration: none; display: inline-block; padding: 25px 50px; }
 #title img { float: left; margin-right: 20px; height: 36px;}
 #labelpmmenu,#labelmenu1{display:none; cursor:pointer;}
 #pmmenu,#navmenu,#menu1{display:none;}
-#menu {position: absolute; top:5px; right:5px;}
+#menu {position: absolute; top:50px; right:5px;}
 #menu-list {display: inline;margin: 0;padding: 0;list-style: none; }
 #menu-list a, #menu-list label{color: #ddd;text-decoration: none;padding: 3px 7px; }
 #menu-list a:hover {
@@ -280,7 +281,7 @@ div#mysearches {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  border: solid 3px #5f9729;
+  border: solid 3px #f34125;
   overflow: auto;
   min-width:240px;
   max-height: 25em;
@@ -315,12 +316,12 @@ div#mysearches td {vertical-align: middle;}
 #projectselector { /*margin-top: 3px;*/ margin-right: 10px; }
 #projectselector button { margin-bottom: 2px;}
 #projectselector option[selected] { font-weight: bold;}
-#pm-menu{background-color:#222;	border-bottom: solid 4px #5f9729;padding: 0px 0px 0px 10px; /*text-align:center;*/ }
+#pm-menu{background-color:#eeeeee; border-bottom: solid 4px #f34125;padding: 0px 0px 0px 10px; /*text-align:center;*/ }
 #nav-menu{background-color:#fff;border-bottom: solid 4px #222;padding: 0px 0px 0px 0px; /*text-align:center;*/ }
 #pm-menu-list, #nav-menu-list {list-style: none;display: inline-block;margin:0;min-height:30px;}
 #pmcontrol{display: inline-block;float: right;margin: 6px 20px 0px 0px;}
 #pm-menu-list li, #nav-menu-list li {display: inline-block;}
-#pm-menu-list li a {display: block; line-height: 1.4em; padding: 11px 11px 8px 35px; color: #f9f9f9;
+#pm-menu-list li a {display: block; line-height: 1.4em; padding: 11px 11px 8px 35px; color: black;
         text-decoration: none; border-left: dotted 1px #3c4041; border-top-left-radius: 3px; border-top-right-radius: 3px;
         background-repeat: no-repeat; background-position: 12px 50%;
 }
@@ -328,12 +329,13 @@ div#mysearches td {vertical-align: middle;}
         text-decoration: none; border-left: dotted 1px #fff; border-top-left-radius: 3px; border-top-right-radius: 3px;
         background-repeat: no-repeat; background-position: 12px 50%;
 }
-#pm-menu-list a:hover  { background-color: #000; border-left: 1px solid #000;}
+#pm-menu-list a:hover { background-color: #eeeeee; border-left: 1px solid #eeeeee; }
 #nav-menu-list a:hover { background-color: #fff; border-left: 1px solid #5f9729; color:#fff; background-color:#5f9729;}
 #pm-menu-list a.active {
         border-left: none;
-        border-top: 1px solid #6cab2e;
-        border-right: 1px solid #6cab2e;
+        border-top: 1px solid #f24328;
+        border-right: 1px solid #f24328;
+        color: white;
 }
 #nav-menu-list a.active {
         border-right: none;
@@ -402,7 +404,7 @@ body a.positive, body button.positive {
 }
 a.positive:hover, button.positive:hover {
   background-color: #78bf34;
-  border: solid 1px #5f9729;
+  border: solid 1px #f34125;
 }
 a.positive:active, button.positive:active {
   background-color: #529214;
@@ -635,7 +637,7 @@ form #taskdetailsfull {
 table.inline{border-collapse:collapse;}
 table.inline td {border:1px solid #ccc; padding:4px;}
 
-#shortcutlabel { cursor:pointer; }
+#shortcutlabel { cursor:pointer;padding-left:1em;}
 #shortcutclose { cursor:pointer;float:right; }
 #shortcuts {
   display:none;
@@ -648,14 +650,32 @@ table.inline td {border:1px solid #ccc; padding:4px;}
   box-shadow:0 0 400px #000;
   top:50%;
   margin-top:-250px;
-  height:500px;
+  height:520px;
   left:50%;
   width:300px;
   margin-left:-150px;
   box-sizing:border-box;
 }
+#shortcutsmodal {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  cursor:pointer;
+}
 #s_shortcuts {display:none;}
-#s_shortcuts:checked ~ #shortcuts {display: block;}
+#s_shortcuts:checked ~ #shortcuts, #s_shortcuts:checked ~ #shortcutsmodal {display: block;}
+#shortcuts > ul {
+    list-style: outside none none;
+    margin-left: 0;
+    padding-left: 0;
+}
+#shortcuts li{line-height:2em;}
+kbd {background-color: #eee;border: 1px solid #ccc;border-radius: 4px;padding: 2px;}
 
 #taskdetails {
   margin: 10px 0px 10px 0px;
@@ -944,7 +964,7 @@ a#show_loginbox {margin-right: 5px;}
   -moz-border-radius: 3px 0 3px 3px;
   -webkit-border-radius: 3px 0 3px 3px;
   background: #ddd;
-  border: solid 3px #5f9729;
+  border: solid 3px #f34125;
   right: 2px;
   z-index: 200;
   min-width: 240px;
