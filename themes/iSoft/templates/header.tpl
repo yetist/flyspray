@@ -76,15 +76,6 @@ if(is_readable(BASEDIR.'/themes/'.$this->_theme.'tags.css')): ?>
 	<?php if($fs->prefs['logo']) { ?><img src="<?php echo Filters::noXSS($baseurl.'/'.$fs->prefs['logo']); ?>" /><?php } ?>
 	<span><?php echo Filters::noXSS($proj->prefs['project_title']); ?></span>
     </a></h1>-->
-
-	<div id="nav-menu">
-		<input id="navmenu" type="checkbox">
-		<label id="labelnavmenu" for="navmenu"></label>
-		<ul id="nav-menu-list">
-		<li class="first"><a href="#">首页</a></li><li><a href="#" class="active">缺陷管理</a></li><li><a href="#">论坛</a></li>
-		<li><a href="#">百科</a></li><li><a href="#">项目</a></li><li><a href="#">文档</a></li>
-		</ul>
-	</div>
     <?php $this->display('links.tpl'); ?>
 
     <?php if (isset($_SESSION['SUCCESS']) && isset($_SESSION['ERROR'])): ?>
