@@ -1,0 +1,6 @@
+isoft/000-base-version 为基线版本，目前指向v1.0-rc1
+
+isoft/100-website 分支基于基线版本，并且merge了以下分支。是为最终部署到服务器上的版本:
+- isoft/001-must-not-push 仅用于部署，不可推送到上游。
+- isoft/002-theme 自定义主题
+- isoft/003-cas-auth cas认证功能
